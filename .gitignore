@@ -1,0 +1,15 @@
+# Entorno virtual (es pesado y no se debe subir)
+venv/
+
+# Archivos de configuración secretos (¡¡NO SUBIR!!)
+.env
+
+# Modelo de Inteligencia Artificial (es pesado y se descarga solo)
+yolov8n.pt
+
+# Archivos de Python cacheados
+__pycache__/
+
+# Assets de audio (opcional, si no quieres subir tu sonido)
+# assets/alarm.wav
+
