@@ -1,4 +1,3 @@
-"""Local alarm sound playback using pygame's mixer."""
 import os
 
 import pygame
