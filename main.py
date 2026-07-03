@@ -1,4 +1,3 @@
-"""Entry point: captures video, detects intrusions in the ROI, and triggers alerts."""
 import time
 from datetime import datetime
 
@@ -18,7 +17,7 @@ def log(message: str) -> None:
 
 def person_in_roi(box, roi_polygon) -> bool:
     x1, y1, x2, y2, _ = box
-    center_point = ((x1 + x2) // 2, (y1 + y2) // 2)  # center of the bounding box
+    center_point = ((x1 + x2) // 2, (y1 + y2) // 2)
     return point_in_roi(center_point, roi_polygon)
 
 
