@@ -1,4 +1,3 @@
-"""Restricted zone (ROI) definition and point-in-polygon containment check."""
 import numpy as np
 import cv2
 
@@ -6,7 +5,6 @@ import config
 
 
 def get_center_rectangle_roi(frame_width: int, frame_height: int) -> np.ndarray:
-    """Builds a centered rectangular ROI polygon sized as a fraction of the frame."""
     roi_w = int(frame_width * 0.85)
     roi_h = int(frame_height * 0.85)
     x1 = (frame_width - roi_w) // 2
