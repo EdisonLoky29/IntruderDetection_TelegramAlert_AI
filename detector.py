@@ -1,9 +1,8 @@
-"""YOLOv8 person detection logic, CPU-only."""
 from ultralytics import YOLO
 
 import config
 
-PERSON_CLASS_ID = 0  # COCO class id for "person"
+PERSON_CLASS_ID = 0 
 
 
 class PersonDetector:
@@ -12,7 +11,6 @@ class PersonDetector:
         self.confidence = confidence or config.CONFIDENCE_THRESHOLD
 
     def detect_people(self, frame):
-        """Returns a list of (x1, y1, x2, y2, confidence) for detected people."""
         results = self.model.predict(
             frame,
             device="cpu",
