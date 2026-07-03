@@ -1,4 +1,3 @@
-"""Sends Telegram alerts with a captured frame and timestamp message."""
 from datetime import datetime
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -23,7 +22,7 @@ class TelegramAlerter:
     def send_intrusion_alert(self, frame) -> bool:
         """Encodes the frame as JPEG and sends it to Telegram with a caption."""
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        caption = f"⚠️ INTRUSO DETECTADO - {timestamp}"
+        caption = f"INTRUSO DETECTADO - {timestamp}"
 
         success, encoded_image = cv2.imencode(".jpg", frame)
         if not success:
